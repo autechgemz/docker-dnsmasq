@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  dnsmasq:
+    build:
+      context: .
+    image: autechgemz/dnsmasq
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    cap_add:
+      - NET_ADMIN
