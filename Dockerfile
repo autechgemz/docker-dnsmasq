@@ -12,6 +12,7 @@ COPY services /services
 
 COPY rsyslog.conf /etc/rsyslog.conf
 COPY dnsmasq.conf /etc/dnsmasq.conf
+COPY resolv_dnsmasq.conf /etc/resolv_dnsmasq.conf
 
 RUN chmod 755 /services/*/run
 
