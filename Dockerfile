@@ -8,13 +8,13 @@ RUN apk upgrade --update --available && \
     bind-tools
 
 COPY dnsmasq.d /etc/dnsmasq.d
-COPY service /service
+COPY services /services
 
 COPY rsyslog.conf /etc/rsyslog.conf
 COPY dnsmasq.conf /etc/dnsmasq.conf
 
-RUN chmod 755 /service/*/run
+RUN chmod 755 /services/*/run
 
 EXPOSE 53/tcp 53/udp
 
-ENTRYPOINT ["runsvdir", "-P", "/service/"]
+ENTRYPOINT ["runsvdir", "-P", "/services/"]
