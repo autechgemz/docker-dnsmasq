@@ -1,7 +1,5 @@
 FROM alpine:3.6
 
-MAINTAINER autechgemz@gmail.com
-
 RUN apk upgrade --update --available && \
     apk add --no-cache \
     runit \
