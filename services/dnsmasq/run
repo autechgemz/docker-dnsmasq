@@ -1,0 +1,2 @@
+#!/bin/sh
+exec dnsmasq -k -5 -C /etc/dnsmasq.conf
